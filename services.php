@@ -15,8 +15,7 @@
 </style>
 
 <div class="container margin-end">
-  <h1 class="text-center">Our Services</h1>
-  <div class="row">
+  <div class="row" id="container-margin">
     <div class="col-12 col-sm-6 col-xl-4 mb-5">
       <div class="card border-0 border-bottom border-discovery shadow-sm">
         <div class="card-body text-center p-4 p-xxl-5">

@@ -332,7 +332,7 @@
     $currentPage = basename($_SERVER['PHP_SELF']);
     //echo $currentPage
     ?>
-    <nav class="navbar navbar-expand-lg py-1">
+    <nav class="navbar sticky-top navbar-expand-lg py-1">
         <div class="container py-1">
             <a class="navbar-brand" href="index.php"><img src="image/thipaks dark.png" id="logo-img"
                     style="width:150px"></a>

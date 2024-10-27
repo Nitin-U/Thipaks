@@ -2,7 +2,6 @@
 ?>
 
     <div class="container margin-end">
-        <h1 class="text-center">Reviews</h1>
         <div class="container" id="container-margin">
             <p class="p-0 m-0 text-center">
                 Ratings and Reviews <span class="typing"></span>

@@ -2,8 +2,7 @@
 ?>
 
     <div class="container margin-end">
-        <h1 class="text-center">Contact Us</h1>
-        <div class="row">
+        <div class="row" id="container-margin">
             <div class="col-4 col-lg-4 col-sm-12 d-none d-lg-block text-justify">
                 <div class="container p-0 m-0">
                     <img src="image/contact.jpg" alt="contact-us" class="img-fluid rounded-3" >

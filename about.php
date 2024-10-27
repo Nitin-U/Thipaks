@@ -2,9 +2,7 @@
 ?>
 
 <div class="container margin-end">
-    <h1 class="text-center">About Us</h1>
-
-    <div class="row">
+    <div class="row" id="container-margin">
         <div class="col-12 col-lg-6 col-sm-12 text-left" >
             <p>At Thipaks, we pride ourselves on being your trusted partner in problem-solving and solution-finding. With a focus on providing reliable and comprehensive services, we help businesses overcome challenges and achieve operational excellence. Our expert team delivers exceptional technical support, ensuring that your systems run smoothly, while offering efficient license management to keep your software up-to-date and compliant.</p>
 
