@@ -113,6 +113,10 @@
             background-color: transparent;
         }
 
+        #logo-img{
+            mix-blend-mode: difference;
+        }
+
         h1 {
             margin: 24px;
         }
@@ -310,21 +314,6 @@
         }
     </style>
 
-    <script>
-        const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to 'dark' if no theme is saved
-        document.documentElement.setAttribute('data-bs-theme', savedTheme);
-
-        // Function to update the logo based on the theme
-        function updateLogo(theme) {
-            const logo = document.getElementById('logo-img');
-            if (theme === 'light') {
-                logo.src = 'image/thipaks light.png'; // Light theme logo
-            } else {
-                logo.src = 'image/thipaks dark.png';  // Dark theme logo
-            }
-        }
-    </script>
-
 </head>
 
 <body>
@@ -367,15 +356,17 @@
         </div>
     </nav>
     <script>
+        // Get saved theme from localStorage or default to 'dark'
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+
         // Ensure the toggle button reflects the current theme on page load
         const themeToggle = document.getElementById('checkbox');
         if (savedTheme === 'light') {
             themeToggle.checked = true;
         }
 
-        // Initialize the correct logo on page load
-        updateLogo(savedTheme);
-
+        // Toggle theme function without logo update
         function toggleTheme() {
             const htmlElement = document.documentElement;
             const currentTheme = htmlElement.getAttribute('data-bs-theme');
@@ -384,13 +375,11 @@
             // Set the new theme
             htmlElement.setAttribute('data-bs-theme', newTheme);
 
-            // Update the logo based on the new theme
-            updateLogo(newTheme);
-
             // Save the selected theme to localStorage
             localStorage.setItem('theme', newTheme);
         }
     </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
