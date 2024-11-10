@@ -1,4 +1,6 @@
-<?php include 'header.php'; ?>
+<?php 
+ob_start();
+include 'header.php'; ?>
 <?php require_once "database/config.php"; ?>
 
 <!DOCTYPE html>
@@ -31,6 +33,44 @@
     </style>
 </head>
 <body>
+
+<?php
+if (isset($_GET['token'])) {
+    $token = $_GET['token'];
+
+    // Query the database for the expiration time using the token
+    $sql = "SELECT expiration_time FROM link WHERE token = :token";
+    try {
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':token', $token);
+        $stmt->execute();
+
+        // Check if a record was found
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($row) {
+            // Get the expiration time from the database
+            $expiration_time = $row['expiration_time'];
+            $current_time = date('Y-m-d H:i:s');
+
+            // Compare the current time with the expiration time
+            if ($current_time > $expiration_time) {
+                // Redirect to the 404 error page if the link has expired
+                header("Location: token_exp.php");
+                exit; // Stop further script execution
+            }
+        } else {
+            echo "<p>Invalid or missing token.</p>";
+            exit;
+        }
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+        exit;
+    }
+} else {
+    echo "<p>No token provided.</p>";
+    exit;
+}
+?>
 
 <div class="container py-5">
     <div class="survey-container">
@@ -181,7 +221,6 @@
         </form>
     </div>
 </div>
-
-
+<?php ob_end_flush(); ?>
 </body>
 </html>

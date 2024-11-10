@@ -57,7 +57,7 @@ $message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : '';
                         </div>
                     </div>
                     <div class="mb-3"> <!-- Row for subject -->
-                        <input type="text" class="form-control" name="subject" placeholder="Subject (required)"
+                        <input type="text" class="form-control" name="subject" value="<?php echo $subject ?>" placeholder="Subject (required)"
                             aria-label="Subject" required>
                     </div>
                     <div class="mb-3" style="height: 150px;"> <!-- Adjust height for the message -->

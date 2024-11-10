@@ -2,7 +2,7 @@
 
 <div class="container-sm margin-end">
     <div class="row">
-        <h1 class="text-center margin-start">Custom Application Design and Development</h1>
+        <h1 class="text-center margin-start purple">Custom Application Design and Development</h1>
     </div>
 
     <div class="col d-flex justify-content-center">
@@ -25,21 +25,21 @@
             <!-- First Column -->
             <div class="col-md-6">
                 <ol>
-                    <li class="mt-5">Assessment and Planning</li>
+                    <li class="mt-5 purple">Assessment and Planning</li>
                     <ul class="p-0 m-0">
                         <li>Collaborating with clients to identify objectives and requirements</li>
                         <li>Conducting feasibility studies and defining project scope</li>
                         <li>Creating a detailed project plan and timeline</li>
                     </ul>
 
-                    <li class="mt-5">User Experience (UX) and User Interface (UI) Design</li>
+                    <li class="mt-5 purple">User Experience (UX) and User Interface (UI) Design</li>
                     <ul class="p-0 m-0">
                         <li>Developing intuitive and user-friendly interfaces</li>
                         <li>Conducting user research and usability testing</li>
                         <li>Creating wireframes and prototypes for client feedback</li>
                     </ul>
 
-                    <li class="mt-5">Custom Software Development</li>
+                    <li class="mt-5 purple">Custom Software Development</li>
                     <ul class="p-0 m-0">
                         <li>Building scalable and robust applications using the latest technologies</li>
                         <li>Implementing agile development methodologies for flexibility</li>
@@ -51,21 +51,21 @@
             <!-- Second Column -->
             <div class="col-md-6">
                 <ol start="4">
-                    <li class="mt-5">Quality Assurance and Testing</li>
+                    <li class="mt-5 purple">Quality Assurance and Testing</li>
                     <ul class="p-0 m-0">
                         <li>Conducting thorough testing at various stages of development</li>
                         <li>Ensuring functionality, performance, and security of the application</li>
                         <li>Addressing any issues and optimizing the application before deployment</li>
                     </ul>
 
-                    <li class="mt-5">Deployment and Implementation</li>
+                    <li class="mt-5 purple">Deployment and Implementation</li>
                     <ul class="p-0 m-0">
                         <li>Assisting with the installation and configuration of the application</li>
                         <li>Providing training and support for end-users</li>
                         <li>Ensuring a smooth transition to the new system</li>
                     </ul>
 
-                    <li class="mt-5">Ongoing Support and Maintenance</li>
+                    <li class="mt-5 purple">Ongoing Support and Maintenance</li>
                     <ul class="p-0 m-0">
                         <li>Offering technical support and troubleshooting assistance</li>
                         <li>Providing regular updates and enhancements to the application</li>
