@@ -52,13 +52,21 @@
             /* 25.5px */
         }
 
-        p {
+        p, ul, ol, li, label, option, .form-select, .form-control {
             font-size: 1rem;
             /* 17px */
         }
 
+        .margin-lg {
+            margin-top: 150px;
+        }
+
         #container-margin {
             margin-top: 24px;
+        }
+
+        .margin-start {
+            margin-top: 48px;
         }
 
         .margin-end {
@@ -121,6 +129,10 @@
             margin: 24px;
         }
 
+        .btn-discovery {
+           border-radius: 0;
+        }
+
         #btn-big-thipaks {
             padding: 15px;
         }
@@ -128,6 +140,34 @@
         .btn-sharp-thipaks {
             border-radius: 0 !important;
         }
+        .btn-transparent {
+            background-color: transparent;
+            border: none;
+            color: #B6C2CF;
+        }
+        .btn-transparent:hover {
+            background-color: transparent;
+            border: none;
+            color: #B6C2CF;
+        }
+        .btn-transparent:active {
+            border-style: outset;
+        }
+        /* Remove focus outline */
+.btn-transparent:focus, 
+.btn-transparent:focus-visible, 
+.btn-transparent:active {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: transparent;
+}
+
+/* Prevent color change on click */
+.btn-transparent:active {
+    background-color: transparent;
+    color: transparent;
+}
 
         .custom-icon {
             color: #6E5DC6;
@@ -200,6 +240,10 @@
             transform: scale(1.1);
         }
 
+        .purple {
+            color: #9F8FEF;
+        }
+
         /* Responsive adjustments */
         @media (max-width: 1200px) {
             h1 {
@@ -222,7 +266,7 @@
             }
 
             /* 23.8px */
-            p {
+            p, ul, ol, li, label, option, .form-select, .form-control {
                 font-size: 0.95rem;
             }
 
@@ -250,7 +294,7 @@
             }
 
             /* 20.4px */
-            p {
+            p, ul, ol, li, label, option, .form-select, .form-control {
                 font-size: 0.9rem;
             }
 
@@ -278,7 +322,7 @@
             }
 
             /* 18.7px */
-            p {
+            p, ul, ol, li, label, option, .form-select, .form-control {
                 font-size: 0.85rem;
             }
 
@@ -306,7 +350,7 @@
             }
 
             /* 17px */
-            p {
+            p, ul, ol, li, label, option, .form-select, .form-control {
                 font-size: 0.8rem;
             }
 
@@ -333,16 +377,14 @@
                 <div class="navbar-nav gap-2 ms-auto">
                     <a class="nav-link <?php echo $currentPage == 'index.php' ? 'active' : ''; ?>" aria-current="page"
                         href="index.php">Home</a>
-                    <a class="nav-link <?php echo $currentPage == 'about.php' ? 'active' : ''; ?>"
-                        href="about.php">About</a>
                     <a class="nav-link <?php echo $currentPage == 'contact.php' ? 'active' : ''; ?>"
                         href="contact.php">Contact</a>
                     <a class="nav-link <?php echo $currentPage == 'services.php' ? 'active' : ''; ?>"
                         href="services.php">Services</a>
                     <a class="nav-link <?php echo $currentPage == 'team.php' ? 'active' : ''; ?>" href="team.php">Team
                         Members</a>
-                    <a class="nav-link <?php echo $currentPage == 'reviews.php' ? 'active' : ''; ?>"
-                        href="reviews.php">Reviews</a>
+                    <a class="nav-link <?php echo $currentPage == 'survey.php' ? 'active' : ''; ?>"
+                        href="survey.php">Reviews</a>
                     <div class="d-flex align-items-center">
                         <input type="checkbox" class="checkbox" id="checkbox" onclick="toggleTheme()">
                         <label for="checkbox" class="checkbox-label">
