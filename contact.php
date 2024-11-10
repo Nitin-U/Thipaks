@@ -12,6 +12,7 @@ $message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : '';
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 0 10px;
+        z-index: -1;
     }
 </style>
 
@@ -28,20 +29,20 @@ $message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : '';
                     services or to get support from our expert team.</p>
             </div>
             <div class="container">
-                <form action="submit_contact.php" method="post">
+                <form action="send_email.php" method="post">
                     <div class="row mb-3"> <!-- Row for first name and last name -->
                         <div class="col-6">
                             <input type="text" class="form-control" placeholder="First name (required)"
-                                aria-label="First name" required>
+                                aria-label="First name" name="fname" required>
                         </div>
                         <div class="col-6">
                             <input type="text" class="form-control" placeholder="Last name (required)"
-                                aria-label="Last name" required>
+                                aria-label="Last name" name="lname" required>
                         </div>
                     </div>
                     <div class="row mb-3 position-relative">
                         <div class="col-6"> <!-- Column for email -->
-                            <input type="text" id="email" class="form-control" placeholder="Email" aria-label="Email"
+                            <input type="text" id="email" class="form-control" placeholder="Email" aria-label="Email" name="email"
                                 required>
                         </div>
 
@@ -52,12 +53,12 @@ $message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : '';
 
                         <div class="col-6"> <!-- Column for phone -->
                             <input type="text" id="phone" class="form-control" placeholder="Phone" aria-label="Phone"
-                                required>
+                                name="phone" required>
                         </div>
                     </div>
                     <div class="mb-3"> <!-- Row for subject -->
                         <input type="text" class="form-control" name="subject" placeholder="Subject (required)"
-                            aria-label="Email" required>
+                            aria-label="Subject" required>
                     </div>
                     <div class="mb-3" style="height: 150px;"> <!-- Adjust height for the message -->
                         <textarea class="form-control" name="message" placeholder="Message (required)"
@@ -66,7 +67,7 @@ $message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : '';
                     <div class="container d-flex justify-content-end gap-2 m-0 p-0">
                         <button type="button" class="btn btn-default btn-sharp-thipaks"
                             id="btn-big-thipaks">Cancel</button>
-                        <button type="submit" class="btn btn-discovery btn-sharp-thipaks"
+                        <button type="submit" name="send" class="btn btn-discovery btn-sharp-thipaks"
                             id="btn-big-thipaks">Submit</button>
                     </div>
                 </form>
