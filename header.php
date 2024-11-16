@@ -29,7 +29,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            
+
         }
 
         h1 {
@@ -52,7 +52,14 @@
             /* 25.5px */
         }
 
-        p, ul, ol, li, label, option, .form-select, .form-control {
+        p,
+        ul,
+        ol,
+        li,
+        label,
+        option,
+        .form-select,
+        .form-control {
             font-size: 1rem;
             /* 17px */
         }
@@ -121,7 +128,7 @@
             background-color: transparent;
         }
 
-        #logo-img{
+        #logo-img {
             mix-blend-mode: difference;
         }
 
@@ -130,7 +137,7 @@
         }
 
         .btn-discovery {
-           border-radius: 0;
+            border-radius: 0;
         }
 
         #btn-big-thipaks {
@@ -140,34 +147,38 @@
         .btn-sharp-thipaks {
             border-radius: 0 !important;
         }
+
         .btn-transparent {
             background-color: transparent;
             border: none;
             color: #B6C2CF;
         }
+
         .btn-transparent:hover {
             background-color: transparent;
             border: none;
             color: #B6C2CF;
         }
+
         .btn-transparent:active {
             border-style: outset;
         }
-        /* Remove focus outline */
-.btn-transparent:focus, 
-.btn-transparent:focus-visible, 
-.btn-transparent:active {
-    outline: none;
-    box-shadow: none;
-    background-color: transparent;
-    color: transparent;
-}
 
-/* Prevent color change on click */
-.btn-transparent:active {
-    background-color: transparent;
-    color: transparent;
-}
+        /* Remove focus outline */
+        .btn-transparent:focus,
+        .btn-transparent:focus-visible,
+        .btn-transparent:active {
+            outline: none;
+            box-shadow: none;
+            background-color: transparent;
+            color: transparent;
+        }
+
+        /* Prevent color change on click */
+        .btn-transparent:active {
+            background-color: transparent;
+            color: transparent;
+        }
 
         .custom-icon {
             color: #6E5DC6;
@@ -266,7 +277,14 @@
             }
 
             /* 23.8px */
-            p, ul, ol, li, label, option, .form-select, .form-control {
+            p,
+            ul,
+            ol,
+            li,
+            label,
+            option,
+            .form-select,
+            .form-control {
                 font-size: 0.95rem;
             }
 
@@ -294,7 +312,14 @@
             }
 
             /* 20.4px */
-            p, ul, ol, li, label, option, .form-select, .form-control {
+            p,
+            ul,
+            ol,
+            li,
+            label,
+            option,
+            .form-select,
+            .form-control {
                 font-size: 0.9rem;
             }
 
@@ -322,7 +347,14 @@
             }
 
             /* 18.7px */
-            p, ul, ol, li, label, option, .form-select, .form-control {
+            p,
+            ul,
+            ol,
+            li,
+            label,
+            option,
+            .form-select,
+            .form-control {
                 font-size: 0.85rem;
             }
 
@@ -350,7 +382,14 @@
             }
 
             /* 17px */
-            p, ul, ol, li, label, option, .form-select, .form-control {
+            p,
+            ul,
+            ol,
+            li,
+            label,
+            option,
+            .form-select,
+            .form-control {
                 font-size: 0.8rem;
             }
 
@@ -374,18 +413,35 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav gap-2 ms-auto">
+                <div class="navbar-nav gap-2 ms-auto d-flex align-items-center">
                     <a class="nav-link <?php echo $currentPage == 'index.php' ? 'active' : ''; ?>" aria-current="page"
                         href="index.php">Home</a>
                     <a class="nav-link <?php echo $currentPage == 'contact.php' ? 'active' : ''; ?>"
                         href="contact.php">Contact</a>
-                    <a class="nav-link <?php echo $currentPage == 'services.php' ? 'active' : ''; ?>"
-                        href="services.php">Services</a>
+
+                    <!-- Services Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle <?php echo $currentPage == 'services.php' ? 'active' : ''; ?>"
+                            href="services.php" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="application_support.php">Application Support</a></li>
+                            <li><a class="dropdown-item" href="batch_job.php">Batch/Jobs</a></li>
+                            <li><a class="dropdown-item" href="custom_app.php">Custom Application</a></li>
+                            <li><a class="dropdown-item" href="prod_support.php">Production Support</a></li>
+                            <!-- Add more services as needed -->
+                        </ul>
+                    </div>
+
                     <a class="nav-link <?php echo $currentPage == 'team.php' ? 'active' : ''; ?>" href="team.php">Team
                         Members</a>
                     <a class="nav-link <?php echo $currentPage == 'survey.php' ? 'active' : ''; ?>"
                         href="survey.php">Reviews</a>
-                    <div class="d-flex align-items-center">
+
+                    <!-- Theme Toggle -->
+                    <div class="d-flex align-items-center ms-3">
                         <input type="checkbox" class="checkbox" id="checkbox" onclick="toggleTheme()">
                         <label for="checkbox" class="checkbox-label">
                             <i class="fa-solid fa-sun"></i>
@@ -395,6 +451,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </nav>
     <script>

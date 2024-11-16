@@ -1,7 +1,7 @@
 <div class="container margin-start">
         <div class="row mb-3 pb-3 fade-in">
             <!-- Heading -->
-            <h1 class="text-center">Our Services Includes</h1>
+            <h1 class="text-center">Services</h1>
 
             <!-- Accordion Section -->
             <div class="col-lg-9 col-md-8 col-sm-6 left-side order-2 order-lg-1">

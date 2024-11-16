@@ -6,7 +6,7 @@ require_once "database/config.php";
 $token = bin2hex(random_bytes(16)); // Generates a random 32-character token
 
 // Set the expiration time (1 hour from now)
-$expiration_time = date('Y-m-d H:i:s', strtotime('+1 hour'));
+$expiration_time = date('Y-m-d H:i:s', strtotime('+1 week'));
 
 // Insert the token and expiration time into the database
 $sql = "INSERT INTO link (token, expiration_time) VALUES (:token, :expiration_time)";

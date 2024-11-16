@@ -2,6 +2,14 @@
 
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Debugging: output the form data
+    echo "<pre>";
+    var_dump($_POST);  // or print_r($_POST);
+    echo "</pre>";
+    
+    // Stop further execution to prevent redirection
+    exit();
+
     // Get form data and sanitize input
     $overall_satisfaction = $_POST['overall_satisfaction'];
     $recommendation_likelihood = $_POST['recommendation_likelihood'];
