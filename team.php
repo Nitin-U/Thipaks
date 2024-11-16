@@ -147,7 +147,7 @@
         <div class="col-6 col-md-4 col-sm-6">
             <div class="card h-100 pt-5">
                 <p class="card-title text-center fw-semibold text-discovery">Suyog Sharma</p>
-                <img src="image/Suyog.png" class="card-img-top">
+                <img src="image/Suyog.jpg" class="card-img-top">
                 <div class="card-body">
                     <div>
                         <p class="card-text text-center">Developer</p>

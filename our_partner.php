@@ -131,7 +131,7 @@
             <img src="image/apungo_light.png" style="width: 80px">
         </div>
         <div class="slide align-self-center">
-            <img class="" src="image/VHP_light.png" style="width: 200px;">
+            <img class="" src="image/VHP_light.png" style="width: 80px;">
         </div>
         <div class="slide">
             <img src="image/facet_light.png" style="width: 80px">
