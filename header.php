@@ -133,7 +133,7 @@
         }
 
         h1 {
-            margin: 24px;
+            margin-top: 24px;
         }
 
         .btn-discovery {
@@ -437,8 +437,8 @@
 
                     <a class="nav-link <?php echo $currentPage == 'team.php' ? 'active' : ''; ?>" href="team.php">Team
                         Members</a>
-                    <a class="nav-link <?php echo $currentPage == 'survey.php' ? 'active' : ''; ?>"
-                        href="survey.php">Reviews</a>
+                    <a class="nav-link <?php echo $currentPage == 'review.php' ? 'active' : ''; ?>"
+                        href="review.php">Reviews</a>
 
                     <!-- Theme Toggle -->
                     <div class="d-flex align-items-center ms-3">

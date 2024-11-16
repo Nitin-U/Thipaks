@@ -1,74 +1,65 @@
-<?php require_once "database/config.php";
+<?php
+// Include the database configuration file
+require_once "database/config.php"; // Ensure this file contains your database connection details
 
-// Check if form is submitted
+// Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Debugging: output the form data
-    echo "<pre>";
-    var_dump($_POST);  // or print_r($_POST);
-    echo "</pre>";
-    
-    // Stop further execution to prevent redirection
-    exit();
+    // Sanitize and capture the ratings
+    $rating_1 = isset($_POST['rating_1']) ? $_POST['rating_1'] : '';
+    $rating_2 = isset($_POST['rating_2']) ? $_POST['rating_2'] : '';
+    $rating_3 = isset($_POST['rating_3']) ? $_POST['rating_3'] : '';
+    $rating_4 = isset($_POST['rating_4']) ? $_POST['rating_4'] : '';
+    $rating_5 = isset($_POST['rating_5']) ? $_POST['rating_5'] : '';
+    $rating_6 = isset($_POST['rating_6']) ? $_POST['rating_6'] : '';
+    $rating_7 = isset($_POST['rating_7']) ? $_POST['rating_7'] : '';
+    $rating_8 = isset($_POST['rating_8']) ? $_POST['rating_8'] : '';
+    $rating_9 = isset($_POST['rating_9']) ? $_POST['rating_9'] : '';
+    $rating_10 = isset($_POST['rating_10']) ? $_POST['rating_10'] : '';
 
-    // Get form data and sanitize input
-    $overall_satisfaction = $_POST['overall_satisfaction'];
-    $recommendation_likelihood = $_POST['recommendation_likelihood'];
-    $product_quality = $_POST['product_quality'];
-    $valuable_features = $_POST['valuable_features'];
-    $missing_features = $_POST['missing_features'];
-    $support_satisfaction = $_POST['support_satisfaction'];
-    $support_responsiveness = $_POST['support_responsiveness'];
-    $support_resources = $_POST['support_resources'];
-    $ease_of_use = $_POST['ease_of_use'];
-    $user_challenges = $_POST['user_challenges'];
-    $continuation_likelihood = $_POST['continuation_likelihood'];
-    $purchase_satisfaction = $_POST['purchase_satisfaction'];
-    $purchase_information = $_POST['purchase_information'];
-    $likes_most = $_POST['like_most'];
-    $suggested_improvements = $_POST['improvements'];
-    $additional_feedback = $_POST['additional_feedback'];
-    
-    // Get current timestamp for submission time
-    $submitted_at = date('Y-m-d H:i:s');
-    
-    // SQL to insert data into the table
-    $sql = "INSERT INTO survey (overall_satisfaction, recommendation_likelihood, product_quality, valuable_features, 
-            missing_features, support_satisfaction, support_responsiveness, support_resources, ease_of_use, 
-            user_challenges, continuation_likelihood, purchase_satisfaction, purchase_information, likes_most, 
-            suggested_improvements, additional_comments, submitted_at) 
-            VALUES (:overall_satisfaction, :recommendation_likelihood, :product_quality, :valuable_features, 
-            :missing_features, :support_satisfaction, :support_responsiveness, :support_resources, :ease_of_use, 
-            :user_challenges, :continuation_likelihood, :purchase_satisfaction, :purchase_information, :likes_most, 
-            :suggested_improvements, :additional_feedback, :submitted_at)";
+    // Sanitize and capture the open-ended responses
+    $valuable_features = isset($_POST['valuable_features']) ? $_POST['valuable_features'] : '';
+    $missing_features = isset($_POST['missing_features']) ? $_POST['missing_features'] : '';
+    $user_challenges = isset($_POST['user_challenges']) ? $_POST['user_challenges'] : '';
+    $like_most = isset($_POST['like_most']) ? $_POST['like_most'] : '';
+    $improvements = isset($_POST['improvements']) ? $_POST['improvements'] : '';
+    $additional_feedback = isset($_POST['additional_feedback']) ? $_POST['additional_feedback'] : '';
 
-    // Prepare statement
-    $stmt = $conn->prepare($sql);
+    try {
+        // Prepare the SQL statement with placeholders
+        $sql = "INSERT INTO survey (rating_1, rating_2, rating_3, rating_4, rating_5, rating_6, rating_7, rating_8, rating_9, rating_10, valuable_features, missing_features, user_challenges, like_most, improvements, additional_feedback)
+                VALUES (:rating_1, :rating_2, :rating_3, :rating_4, :rating_5, :rating_6, :rating_7, :rating_8, :rating_9, :rating_10, :valuable_features, :missing_features, :user_challenges, :like_most, :improvements, :additional_feedback)";
 
-    // Bind parameters
-    $stmt->bindParam(':overall_satisfaction', $overall_satisfaction);
-    $stmt->bindParam(':recommendation_likelihood', $recommendation_likelihood);
-    $stmt->bindParam(':product_quality', $product_quality);
-    $stmt->bindParam(':valuable_features', $valuable_features);
-    $stmt->bindParam(':missing_features', $missing_features);
-    $stmt->bindParam(':support_satisfaction', $support_satisfaction);
-    $stmt->bindParam(':support_responsiveness', $support_responsiveness);
-    $stmt->bindParam(':support_resources', $support_resources);
-    $stmt->bindParam(':ease_of_use', $ease_of_use);
-    $stmt->bindParam(':user_challenges', $user_challenges);
-    $stmt->bindParam(':continuation_likelihood', $continuation_likelihood);
-    $stmt->bindParam(':purchase_satisfaction', $purchase_satisfaction);
-    $stmt->bindParam(':purchase_information', $purchase_information);
-    $stmt->bindParam(':likes_most', $likes_most);
-    $stmt->bindParam(':suggested_improvements', $suggested_improvements);
-    $stmt->bindParam(':additional_feedback', $additional_feedback);
-    $stmt->bindParam(':submitted_at', $submitted_at);
+        // Prepare the statement
+        $stmt = $conn->prepare($sql);
 
-    // Execute the query
-    if ($stmt->execute()) {
-        header("location: survey.php");
-        exit();
-    } else {
-        echo "Error submitting survey. Please try again later.";
+        // Bind the parameters to the prepared statement
+        $stmt->bindParam(':rating_1', $rating_1);
+        $stmt->bindParam(':rating_2', $rating_2);
+        $stmt->bindParam(':rating_3', $rating_3);
+        $stmt->bindParam(':rating_4', $rating_4);
+        $stmt->bindParam(':rating_5', $rating_5);
+        $stmt->bindParam(':rating_6', $rating_6);
+        $stmt->bindParam(':rating_7', $rating_7);
+        $stmt->bindParam(':rating_8', $rating_8);
+        $stmt->bindParam(':rating_9', $rating_9);
+        $stmt->bindParam(':rating_10', $rating_10);
+        $stmt->bindParam(':valuable_features', $valuable_features);
+        $stmt->bindParam(':missing_features', $missing_features);
+        $stmt->bindParam(':user_challenges', $user_challenges);
+        $stmt->bindParam(':like_most', $like_most);
+        $stmt->bindParam(':improvements', $improvements);
+        $stmt->bindParam(':additional_feedback', $additional_feedback);
+
+        // Execute the prepared statement
+        $stmt->execute();
+
+        echo "New survey response recorded successfully!";
+        header('location:index.php');
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage(); // Handle errors via exception
     }
+
+    // Close the connection (if necessary)
+    $conn = null;
 }
 ?>

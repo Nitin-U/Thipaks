@@ -39,7 +39,8 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero saepe adipisci, aliquam dolore blanditiis dolorum ad, perferendis quis rem quos, illum quod tenetur explicabo. Voluptatem placeat voluptatibus nobis sint ea? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, doloremque sapiente impedit reiciendis molestias alias, dolor cum dolores quas autem suscipit expedita ipsam iste tenetur architecto ab molestiae magnam at!
+                                Thipaks LLC.
+                                Info: Maheswar Khadga/ Thipaks LLC
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-discovery" data-bs-dismiss="modal">Close</button>
@@ -69,7 +70,8 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                With over a decade of experience in the U.S. as a software engineer, currently working as an IT Lead on support department of Bank of America, he brings a wealth of expertise in system reliability, security, and team leadership. His career reflects a strong commitment to innovation and problem-solving, skills he now leverages to provide top-tier technology solutions through his own business. Passionate about empowering clients with dependable and scalable tech solutions, he combines industry insight with a personalized approach to meet the unique needs of each project.
+                            Thipaks LLC.
+                            Info: Dipak Adhikari/ Thipaks LLC
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-discovery" data-bs-dismiss="modal">Close</button>
@@ -99,7 +101,8 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero saepe adipisci, aliquam dolore blanditiis dolorum ad, perferendis quis rem quos, illum quod tenetur explicabo. Voluptatem placeat voluptatibus nobis sint ea? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, doloremque sapiente impedit reiciendis molestias alias, dolor cum dolores quas autem suscipit expedita ipsam iste tenetur architecto ab molestiae magnam at!
+                                Thipaks LLC.
+                                Info: Roshan Neupane/ Thipaks LLC
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-discovery" data-bs-dismiss="modal">Close</button>
@@ -129,7 +132,8 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero saepe adipisci, aliquam dolore blanditiis dolorum ad, perferendis quis rem quos, illum quod tenetur explicabo. Voluptatem placeat voluptatibus nobis sint ea? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, doloremque sapiente impedit reiciendis molestias alias, dolor cum dolores quas autem suscipit expedita ipsam iste tenetur architecto ab molestiae magnam at!
+                                Thipaks LLC.
+                                Info: Nitin Utsav Bartaula/ Thipaks LLC
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-discovery" data-bs-dismiss="modal">Close</button>
@@ -159,7 +163,8 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero saepe adipisci, aliquam dolore blanditiis dolorum ad, perferendis quis rem quos, illum quod tenetur explicabo. Voluptatem placeat voluptatibus nobis sint ea? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, doloremque sapiente impedit reiciendis molestias alias, dolor cum dolores quas autem suscipit expedita ipsam iste tenetur architecto ab molestiae magnam at!
+                                Thipaks LLC.
+                                Info: Suyog Sharma/ Thipaks LLC
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-discovery" data-bs-dismiss="modal">Close</button>
